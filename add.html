@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Department Library</title>
+    <link rel="icon" href="C:\xampp\htdocs\Library\favicon.ico" type="image/x-icon">
+    <h1>Computer Department Library</h1>
+    
+    <style>
+      body{
+        background-color: #c5cbe3;
+      }
+      h1{
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 15px black, 0 0 5px #2fa075, 0 0 25px #023521; 
+        margin-left: auto;
+        margin-right: auto;   
+        padding-bottom:1%;
+        border-bottom: 4px solid black;     
+    }
+      p{
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: larger;
+        border: 2px solid #c5cbe3;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 0.4%;
+        background-color: white;
+        border-radius: 5px;
+      }
+      .details{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #058454;
+      }
+      tr{
+          text-align: center;
+          font-size: large;
+      }
+      td,th{
+          padding: 10px 10px;
+      }  
+      .name{
+        text-align: right;
+      }    
+      .input{
+        text-align: left;
+      }
+      .button{
+        width: 25%;
+        padding: 4px;
+        border-radius: 5px;
+        border: 1px solid #18be7f;
+        background-color: white;
+        transition-duration: 0.4s;
+        font-size: 14px;
+      }
+      .button:hover{
+          background-color: #058454;
+          border: 1px solid #058454;
+          color: white;
+      }
+      .button_home{
+        width: 8%;
+        padding: 0.4%;
+        margin-left: 46%;
+        margin-right: 50%;
+        margin-top: -5%;
+        border-radius: 5px;
+        border: 2px solid #099e65;
+        background-color: white;
+        transition-duration: 0.4s;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .button_home:hover{
+          background-color: #058454;
+          border: 2px solid #058454;
+          color: white;
+      }
+      tr:nth-child(even){
+          background-color: #d6eeee ;
+      }
+      tr:nth-child(odd){
+          background-color: white;
+      }
+
+    </style>
+    
+    <script>
+      function validateForm() {
+        var x = document.forms["addform"]["bname"].value;
+        var y = document.forms["addform"]["pub"].value;
+        var z = document.forms["addform"]["isbn"].value;
+        var w = document.forms["addform"]["quantity"].value;
+
+        if (x == "" || y=="" || z== "" ||w == "") {
+          alert("Every field must be filled out");
+          return false;
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <div>
+      <form action="http://localhost/Library/home.html" method="POST"> 
+      <input type="submit" value="Go to Home" class="button_home"/>
+      </form>
+    </div>
+    <div>   
+      <p>To add a book into database, fill the following details.</p> 
+      <form name="addform" onsubmit="return validateForm()" action="http://localhost/Library/add.php" method="post" required>
+        <table class="details">
+          <tr class="head" style="background-color: #058454; color: white;">
+            <th colspan="2" >Book details</th>
+          </tr>
+          <tr> 
+            <td class="name">Book name:</td>
+            <td class="input"><input type="text"  name="bname" maxlength="100"  required/></td>
+          </tr>
+          <tr>
+            <td class="name">Publisher:</td>
+            <td class="input"><input type="text"  name="pub" maxlength="50" placeholder="eg. Wiley,Oxford.." required/></td>
+          </tr>
+          <tr>
+            <td class="name">ISBN:</td>
+            <td class="input"><input type="text"  name="isbn" maxlength="13" placeholder="Without any space & symbol" required/></td>
+          </tr>
+          <tr>
+            <td class="name">Quantity:</td>
+            <td class="input"><input type="text"  name="quantity" maxlength="2" placeholder="eg. 4" required/></td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"><input type="submit" value="Add Book" class="button"></td>
+          </tr>
+        </table>
+      
+      </form>
+    </div>
+
+
+  </body>
+</html>

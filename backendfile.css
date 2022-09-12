@@ -1,0 +1,116 @@
+body{
+    background-color: #c5cbe3;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 15px black, 0 0 5px #2fa075, 0 0 25px #023521; 
+    margin-left: auto;
+    margin-right: auto;   
+    padding-bottom:1%;
+    border-bottom: 4px solid black;     
+}
+
+label{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.details{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #058454;
+  }
+
+tr{
+    text-align: center;
+    font-size: medium;
+}
+
+td,th{
+    padding: 8px 8px;
+}
+
+tr:nth-child(even){
+    background-color: #d6eeee ;
+}
+
+tr:nth-child(odd){
+    background-color: white;
+}
+.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a8{
+    border-right: 2px solid #058454;
+}
+
+.button{
+    width: 4%;
+    padding: 0.2%;
+    margin-left: 0.4%;
+    border-radius: 5px;
+    border: 2px solid #058454;
+    background-color: white;
+    transition-duration: 0.4s;
+    font-size: smaller;
+  }
+  .button:hover{
+      background-color: #058454;
+      border: 2px solid #058454;
+      color: white;
+  }
+
+  .button_again{
+    width: 8%;
+    padding: 0.4%;
+    margin-left: 46%;
+    margin-right: 50%;
+    border-radius: 5px;
+    border: 2px solid #058454;
+    background-color: white;
+    transition-duration: 0.4s;
+    font-size: smaller;
+  }
+  .button_again:hover{
+      background-color: #058454;
+      border: 2px solid #058454;
+      color: white;
+  }
+
+  .home_button{
+    width: 8%;
+    padding: 0.4%;
+    margin-left: 46%;
+    margin-right: 50%;
+    margin-top: -6%;
+    border-radius: 5px;
+    border: 2px solid #058454;
+    background-color: white;
+    transition-duration: 0.4s;
+    font-size: smaller;
+  }
+  .home_button:hover{
+      background-color: #058454;
+      border: 2px solid #058454;
+      color: white;
+  }
+  
+  .message{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    border: 2px solid #c5cbe3;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 0.4%;
+    background-color: white;
+    border-radius: 5px;
+  }

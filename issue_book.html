@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Department Library</title>
+    <link rel="icon" href="C:\xampp\htdocs\Library\favicon.ico" type="image/x-icon">
+    <h1>Computer Department Library</h1>
+    
+    <style>
+      body{
+        background-color: #c5cbe3;
+      }
+      h1{
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 15px black, 0 0 5px #2fa075, 0 0 25px #023521; 
+        margin-left: auto;
+        margin-right: auto;   
+        padding-bottom:1%;
+        border-bottom: 4px solid black;     
+    }
+    p{
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: larger;
+        border: 2px solid #c5cbe3;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 0.4%;
+        background-color: white;
+        border-radius: 5px;
+      }
+      .details{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #058454;
+      }
+      tr{
+          text-align: center;
+          font-size: large;
+      }
+      td,th{
+          padding: 10px 10px;
+      }  
+      .name{
+        text-align: right;
+      }    
+      .input{
+        text-align: left;
+      }
+      .button{
+        width: 25%;
+        padding: 4px;
+        border-radius: 5px;
+        border: 1px solid #18be7f;
+        background-color: white;
+        transition-duration: 0.4s;
+        font-size: 14px;
+      }
+      .button:hover{
+          background-color: #058454;
+          border: 1px solid #058454;
+          color: white;
+      }
+      .button_home{
+        width: 8%;
+        padding: 0.4%;
+        margin-left: 46%;
+        margin-right: 50%;
+        margin-top: -5%;
+        border-radius: 5px;
+        border: 2px solid #099e65;
+        background-color: white;
+        transition-duration: 0.4s;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .button_home:hover{
+          background-color: #058454;
+          border: 2px solid #058454;
+          color: white;
+      }
+      tr:nth-child(even){
+          background-color: #d6eeee ;
+      }
+      tr:nth-child(odd){
+          background-color: white;
+      }
+    </style>
+    
+    <script>
+      function validateForm() {
+        var x = document.forms["addstud"]["eno"].value;
+        var y = document.forms["addstud"]["sname"].value;
+        var z = document.forms["addstud"]["contact"].value;
+        var w = document.forms["addstud"]["isbn"].value;
+
+        if (x == "" || y=="" || z== "" ||w == "") {
+          alert("Every field must be filled out");
+          return false;
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <div>
+      <form action="http://localhost/Library/home.html" method="POST"> 
+      <input type="submit" value="Go to Home" class="button_home"/>
+      </form>
+    </div>
+    <div>   
+
+      <form name="addstud" onsubmit="return validateForm()" action="http://localhost/Library/issue_book.php" method="post" required>
+        <p>To issue a book fill the following details:</p>
+        <table class="details">
+          <tr class="head" style="background-color: #058454; color: white;">
+            <th colspan="2" >Student & Book details</th>
+          </tr>
+          <tr> 
+            <td class="name">Enrolment No:</td>
+            <td class="input"><input type="text"  name="eno" maxlength="12" placeholder="190280107156" required/></td>
+          </tr>
+          <tr>
+            <td class="name">Student name:</td>
+            <td class="input"><input type="text"  name="sname" maxlength="50" placeholder="Kirtan Vaja" required/></td>
+          </tr>
+          <tr>
+            <td class="name">Contact No:</td>
+            <td class="input"><input type="text"  name="contact" maxlength="10" placeholder="9328131691" required/></td>
+          </tr>
+          <tr>
+            <td class="name">ISBN:</td>
+            <td class="input"><input type="text"  name="isbn" maxlength="13" placeholder="Without space & Symbol" required/></td>
+          </tr>
+          <tr class="head">
+            <td colspan="2"><input type="submit" value="Issue" class="button"></td>
+          </tr>
+        </table>          
+      </form>
+    </div>
+
+  </body>
+</html>
